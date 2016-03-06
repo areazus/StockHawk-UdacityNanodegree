@@ -1,0 +1,45 @@
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainRelativeView">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noInternetConnection"
+            android:id="@+id/noInternetConnectionView"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"/>
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/noInternetConnectionView"/>
+    </RelativeLayout>
+
+  <com.melnykov.fab.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_margin="16dp"
+      android:src="@drawable/ic_add_white_24dp"
+      fab:fab_colorNormal="@color/material_blue_500"
+      fab:fab_colorPressed="@color/material_blue_600"
+      fab:fab_colorRipple="@color/ripple"
+      fab:fab_shadow="true"
+      fab:fab_type="normal"
+      fab:layout_anchor="recycler_view"
+      fab:layout_anchorGravity="bottom | end"
+      android:contentDescription="@string/floatingActionButtonDescription"
+      />
+</FrameLayout>
